@@ -33,11 +33,11 @@ class Testcontroller extends Controller
 
 	 $request_param = [
             'out_trade_no'  => $out_trade_no,
-            'product_code'  => $product_code,
+            'product_code'  => $product_code, 
             'total_amount'  => $total_amount,
             'subject'       => $subject
         ];
-        $param = [
+        $param = [                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
             'app_id'        => $appid,
             'method'        => $method,
             'charset'       => $charset,
