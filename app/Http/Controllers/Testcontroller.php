@@ -20,16 +20,11 @@ class Testcontroller extends Controller
    	$notify_url='http://1905chenjian.comcto.com/alipay/notify';   //支付宝异步通知地址
    	$biz_content='';
 
-
-   	
-
-
    	//请求参数
    	$out_trade_no =time() . rand(1111,9999);
    	$product_code='FAST_INSTANT_TRADE_PAY';
    	$total_amount =0.01;
    	$subject='测试订单' .$out_trade_no;
-
 
 	 $request_param = [
             'out_trade_no'  => $out_trade_no,
@@ -37,8 +32,7 @@ class Testcontroller extends Controller
             'total_amount'  => $total_amount,
             'subject'       => $subject
         ];
-        $param = [                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-            'app_id'        => $appid,
+   $param = [                                                                 'app_id'         => $appid,
             'method'        => $method,
             'charset'       => $charset,
             'sign_type'     => $signtype,
@@ -48,24 +42,16 @@ class Testcontroller extends Controller
             'return_url'    => $return_url,
             'biz_content'   => json_encode($request_param)
         ];
-
-
         echo '<pre>';print_r($param);echo'</pre>';
         // sort($param);
         // echo '<pre>';print_r($param);echo'</pre>';
        //字典序排序
        ksort($param);
        echo '<pre>';print_r($param);echo'</pre>';
-
-
         $str ="";
         foreach($param as $k=>$v)
         {
-
-
          $str .=$k . '=' . $v .'&';
-
-
         }
         //echo 'str:' .$str;die;
         $str = rtrim($str,'&');
@@ -88,12 +74,6 @@ class Testcontroller extends Controller
         //发送GET请求
         //echo $url;die;
         header("Location:".$url);
-
-
-
-
-
-
    }
 }
 
